@@ -4,7 +4,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="{{ .Site.Author.name }}" />
+  <meta name="author" content="{{ .Site.Params.Author.name }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
 
@@ -48,6 +48,29 @@
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML" async></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a']
+        },
+        messageStyle: "none",
+        showProcessingMessages: false,
+        MathMenu: {
+            showLocale: false,
+            showRenderer: false
+        }
+    });
+  </script>
+
+  <script src="
+  https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js
+  "></script>
+
+
   {{ range .Site.Params.extraCSSFiles -}}
   <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
   {{- end }}
@@ -56,14 +79,8 @@
     title="{{ .Site.Title }}">
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Shade" rel="stylesheet">
-  <!-- quicklink require -->
-  <!-- <script>
-    /* Disable minification (remove `.min` from URL path) for more info 
-    https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver
-    */
-    (function (undefined) { }).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
-  </script> -->
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
 
   {{ if .Site.Params.TwitterCards }}{{ template "_internal/twitter_cards.html" . }}{{ end }}
   {{ .Site.Params.extraHead | safeHTML }}

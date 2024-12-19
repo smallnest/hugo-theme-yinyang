@@ -1,7 +1,7 @@
 /* global */
 
 body {
-  font-family: "Bree Serif", sans-serif;
+  font-family: "Bree Serif", serif;
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
 }
@@ -81,7 +81,7 @@ a:hover {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 32px;
-  font-family: "Bungee Shade", sans-serif;
+  font-family: sans-serif;
 }
 .header-title a {
   text-decoration: none;
@@ -129,9 +129,19 @@ a:hover {
 
 .posts-category {
   padding: 3px 0;
-  border: #000 2px solid;
+  border: rgb(187, 187, 187) 2px solid;
   border-radius: 5px;
   /* margin-bottom: 3px; */
+}
+
+.posts-category a {
+  color: rgb(187, 187, 187); /* 设置 a 标签的字体颜色 */
+  text-decoration: none; /* 去掉下划线 */
+}
+
+.posts-category a:hover {
+  color: #888; /* 悬停时字体颜色变为白色 */
+  border-color: #888; /* 悬停时边框颜色变为白色 */
 }
 
 .site-footer {
@@ -164,10 +174,21 @@ a:hover {
 .post-tags {
   display: inline;
   font-weight: 600;
-  padding: 2px 5px;
+  padding: 1px 5px;
   margin-right: 6px;
-  border: #000 2px solid;
+  border: rgb(187, 187, 187) 2px solid; /* 修改边框颜色 */
   border-radius: 5px;
+  color: rgb(187, 187, 187); /* 修改字体颜色 */
+}
+
+.post-tags a {
+  color: rgb(187, 187, 187); /* 设置 a 标签的字体颜色 */
+  text-decoration: none; /* 去掉下划线 */
+}
+
+.post-tags a:hover {
+  color: #888; /* 悬停时字体颜色变为白色 */
+  border-color: #888; /* 悬停时边框颜色变为白色 */
 }
 
 .post-date {
@@ -216,9 +237,9 @@ a:hover {
 }
 
 .related-content {
-  border-width: 3px;
+  border-width: 1px;
   border-style: solid;
-  border-color: #000;
+  border-color: rgb(230, 230, 230);
   padding: 0 10px;
   margin-bottom: 50px;
   margin-top: 100px;

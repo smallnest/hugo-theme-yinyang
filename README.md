@@ -38,7 +38,7 @@ theme = "yinyang"
 headTitle = "Joway Wang"
 ```
 
-If there is no `headTitle` in params, use `.Site.Author.name`.
+If there is no `headTitle` in params, use `.Site.Params.Author.name`.
 
 ### Main section
 
@@ -158,4 +158,11 @@ postHeaderContent = ""
 postFooterContent = "<br/><br/><p>Subscribe to：<a target='_blank' href='https://mailchi.mp/a1a0d59e7a19/joway'>Joway's Blog</a></p>"
 # extraCSSFiles = ["css/foo.css", "css/bar.css"]
 extraCSSFiles = []
+```
+
+
+## new posts
+
+```sh
+hugo new content/en/posts/my-first-post.md
 ```

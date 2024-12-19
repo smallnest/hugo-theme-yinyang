@@ -21,7 +21,7 @@
               {{ end }}
             </div>
             <div class="col-xs-6">
-              {{ if .Site.Author.name }}
+              {{ if .Site.Params.Author.name }}
               <div class="post-author">
                 <a target="_blank" href="{{ .Site.Author.homepage }}">@{{ .Site.Author.name }}</a>
               </div>
@@ -59,11 +59,15 @@
           {{ if .Site.Params.postAds }}
           <div class="post-ads">{{ .Site.Params.postAds | safeHTML }}</div>
           {{ end }}
-          <!-- split -->
-          <div style="height: 50px;"></div>
-          {{ if .Site.Params.disqus }}
-          <div class="post-comments">
-            {{ partial "disqus.html" . }}
+          {{ if .Site.Params.utterances }}
+          <div id="comments" class="utterances">
+            <script src="https://utteranc.es/client.js"
+                    repo="smallnest/rpcx.blog.gitalk"
+                    issue-term="pathname"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+            </script>
           </div>
           {{ end }}
         {{ end }}
