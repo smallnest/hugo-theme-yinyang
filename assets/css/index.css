@@ -201,6 +201,11 @@ a:hover {
   font-weight: 600;
 }
 
+.reading-time {
+  color: rgb(187, 187, 187);
+  text-align: right;
+}
+
 .page-content {
   min-height: 60%;
 }

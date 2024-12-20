@@ -13,6 +13,9 @@
     <a href="{{ .link }}" target="_blank">{{ .name }}</a>
   </div>
   {{ end }}
+  <div class="header-item" width="40px">
+    {{ partial "search-google.html" . }}
+  </div>  
 </div>
 <div class="row">
   {{ range .Site.Languages -}} {{ if ne .LanguageName $curLanguageName }}
