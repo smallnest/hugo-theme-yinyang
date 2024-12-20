@@ -47,6 +47,7 @@
   {{ with resources.Get "css/flexboxgrid-6.3.1.min.css" | minify }}
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
+  <link rel="stylesheet" href="/css/syntax.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML" async></script>
   <script type="text/x-mathjax-config">
